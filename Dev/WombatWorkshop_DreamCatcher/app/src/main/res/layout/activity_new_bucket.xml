@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewBucket">
+
+    <EditText
+        android:id="@+id/editBucketName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/privacyLable"
+        app:layout_constraintStart_toStartOf="@+id/pageLable"
+        app:layout_constraintTop_toBottomOf="@+id/bucketNameLable" />
+
+    <TextView
+        android:id="@+id/pageLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="86dp"
+        android:layout_marginBottom="40dp"
+        android:text="Create A New Bucket"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bucketNameLable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bucketNameLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="3dp"
+        android:text="Bucket Name"
+        app:layout_constraintBottom_toTopOf="@+id/editBucketName"
+        app:layout_constraintStart_toStartOf="@+id/editBucketName"
+        app:layout_constraintTop_toBottomOf="@+id/pageLable" />
+
+    <RadioGroup
+        android:id="@+id/privacyOptions"
+        android:layout_width="156dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="101dp"
+        app:layout_constraintBottom_toTopOf="@+id/createBucket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/privacyLable">
+
+        <RadioButton
+            android:id="@+id/privacyPublic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Public" />
+
+        <RadioButton
+            android:id="@+id/privacyFriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Friends Only" />
+
+        <RadioButton
+            android:id="@+id/privacyPrivate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Private" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/privacyLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="Privacy Setting"
+        app:layout_constraintBottom_toTopOf="@+id/privacyOptions"
+        app:layout_constraintStart_toStartOf="@+id/privacyOptions"
+        app:layout_constraintTop_toBottomOf="@+id/editBucketName" />
+
+    <Button
+        android:id="@+id/createBucket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="159dp"
+        android:text="Create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/privacyOptions"
+        app:layout_constraintTop_toBottomOf="@+id/privacyOptions" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

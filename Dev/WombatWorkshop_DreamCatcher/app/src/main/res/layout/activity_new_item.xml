@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewItem">
+
+    <Button
+        android:id="@+id/createItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:text="Create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="222dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="61dp"
+        android:hapticFeedbackEnabled="true"
+        android:max="5"
+        app:layout_constraintBottom_toTopOf="@+id/createItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDescription" />
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionLable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dueDateLabel" />
+
+    <TextView
+        android:id="@+id/descriptionLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="1dp"
+        android:text="Description"
+        app:layout_constraintBottom_toTopOf="@+id/editDescription"
+        app:layout_constraintStart_toStartOf="@+id/datePicker1"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker1" />
+
+    <EditText
+        android:id="@+id/editDescription"
+        android:layout_width="207dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="115dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="true"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/descriptionLable"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionLable" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/dueDateLabel"
+        app:layout_constraintStart_toStartOf="@+id/nameLable"
+        app:layout_constraintTop_toBottomOf="@+id/nameLable" />
+
+    <TextView
+        android:id="@+id/dueDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Complete By"
+        app:layout_constraintBottom_toTopOf="@+id/datePicker1"
+        app:layout_constraintStart_toStartOf="@+id/datePicker1"
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+    <TextView
+        android:id="@+id/nameLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="75dp"
+        android:text="Item Name"
+        app:layout_constraintBottom_toTopOf="@+id/editName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/priorityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:hapticFeedbackEnabled="true"
+        android:text="Priority:"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

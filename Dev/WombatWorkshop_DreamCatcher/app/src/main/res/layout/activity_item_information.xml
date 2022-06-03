@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".itemInformation">
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="270dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="32dp"
+        android:isScrollContainer="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionLable2" />
+
+    <TextView
+        android:id="@+id/descriptionLable2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="Description"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionText"
+        app:layout_constraintStart_toStartOf="@+id/descriptionText"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
+
+    <TextView
+        android:id="@+id/completeByDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/priorityText2"
+        app:layout_constraintEnd_toEndOf="@+id/priorityText2"
+        app:layout_constraintStart_toEndOf="@+id/priorityText2"
+        app:layout_constraintTop_toBottomOf="@+id/completeByDateLable" />
+
+    <TextView
+        android:id="@+id/completeByDateLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Complete by"
+        app:layout_constraintBottom_toTopOf="@+id/completeByDate"
+        app:layout_constraintStart_toStartOf="@+id/completeByDate"
+        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+    <TextView
+        android:id="@+id/itemNameLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="2dp"
+        android:text="Item Name"
+        app:layout_constraintBottom_toTopOf="@+id/itemName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/completeByDateLable"
+        app:layout_constraintStart_toStartOf="@+id/itemNameLable"
+        app:layout_constraintTop_toBottomOf="@+id/itemNameLable" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="17dp"
+        android:hapticFeedbackEnabled="true"
+        android:max="5"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionLable2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priorityText2" />
+
+    <TextView
+        android:id="@+id/priorityText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Priority:"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar2"
+        app:layout_constraintStart_toStartOf="@+id/seekBar2"
+        app:layout_constraintTop_toBottomOf="@+id/completeByDate" />
+
+    <Button
+        android:id="@+id/deleteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="99dp"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="148dp"
+        android:text="Completed"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/deleteItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
